@@ -5,25 +5,34 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx webpack --config config/webpack.config.js"
+    "build": "npx webpack --config config/webpack.config.js",
+    "watch": "webpack --config config/webpack.config.js --watch",
+    "start": "webpack-dev-server --hotOnly --config config/webpack.config.js",
+    "dev": "node ./server/server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zhangcunxin/sandbox-web.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "zhangcunxin",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/zhangcunxin/sandbox-web/issues"
   },
   "homepage": "https://github.com/zhangcunxin/sandbox-web#readme",
   "devDependencies": {
+    "clean-webpack-plugin": "^1.0.0",
     "css-loader": "^2.0.1",
+    "express": "^4.16.4",
     "file-loader": "^2.0.0",
+    "html-webpack-plugin": "^3.2.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.27.1",
-    "webpack-cli": "^3.1.2"
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-middleware": "^3.4.0",
+    "webpack-dev-server": "^3.1.10",
+    "webpack-hot-middleware": "^2.24.3"
   },
   "dependencies": {
     "lodash": "^4.17.11"
