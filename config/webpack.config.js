@@ -29,6 +29,15 @@ module.exports = {
     devServer: {
         contentBase: path.resolve(__dirname, '../dist'),
         hot: true
-    }
+    },
+    module: {
+        rules: [
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader']
+            }
+        ]
+    },
+    mode: "production"
 }
 
