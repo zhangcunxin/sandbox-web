@@ -1,11 +1,12 @@
 import './style.css'
 import {cube} from './math.js'
 import printMe from './print'
+import _ from 'lodash'
 function component() {
     var element = document.createElement('div');
 
     var pre = document.createElement('pre')
-    pre.innerHTML = ['Hello webpack', '5 cubed is equal to ' + cube(5)].join('\n\n')
+    pre.innerHTML = _.join(['Hello webpack', '5 cubed is equal to ' + cube(5)], '\n')
     element.appendChild(pre)
 
     var btn = document.createElement('btn')

@@ -2,6 +2,7 @@ const path = require('path')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
+const cleanPath = path.resolve(__dirname, '../dist')
 module.exports = {
     entry: {
         app: './src/index.js'
@@ -10,10 +11,14 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'Production'
         }),
-        new CleanWebpackPlugin([path.resolve(__dirname, '../dist')])
+        new CleanWebpackPlugin([cleanPath], {
+            root: path.resolve(__dirname, '../'), // set project root path
+            verbose: true, 
+            dry: false
+        })
     ],
     output: {
-        filename: '[name].bundle.js',
+        filename: '[name].[chunkhash].js',
         path: path.resolve(__dirname, '../dist')
     },
     module: {
@@ -23,5 +28,10 @@ module.exports = {
                 use: ['style-loader', 'css-loader']
             }
         ]
+    },
+    optimization: {
+        splitChunks: {
+            chunks: 'all'
+        }
     }
 }
