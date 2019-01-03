@@ -4,5 +4,5 @@
   ```bash
     $ yarn 
     $ yarn dev
-    http://localhost:30001
+    http://localhost:3001
   ```
