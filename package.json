@@ -1,42 +1,36 @@
 {
-  "name": "sandbox-web",
+  "name": "vue-webpack-demo",
   "version": "1.0.0",
-  "description": "",
-  "private": true,
+  "main": "index.js",
+  "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config config/webpack.production.js",
-    "watch": "webpack --config config/webpack.config.js --watch",
-    "start": "webpack-dev-server --hotOnly --config config/webpack.config.js",
-    "dev": "node ./server/server.js"
+    "dev": "node build/bin/start"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/zhangcunxin/sandbox-web.git"
-  },
-  "keywords": [],
-  "author": "zhangcunxin",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/zhangcunxin/sandbox-web/issues"
-  },
-  "homepage": "https://github.com/zhangcunxin/sandbox-web#readme",
   "devDependencies": {
-    "clean-webpack-plugin": "^1.0.0",
-    "css-loader": "^2.0.1",
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-transform-arrow-functions": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/polyfill": "^7.2.5",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/register": "^7.0.0",
+    "@babel/runtime": "^7.2.0",
+    "babel-loader": "^8.0.4",
     "express": "^4.16.4",
-    "file-loader": "^2.0.0",
     "html-webpack-plugin": "^3.2.0",
-    "style-loader": "^0.23.1",
-    "uglifyjs-webpack-plugin": "^2.0.1",
-    "webpack": "^4.27.1",
+    "pug": "^2.0.3",
+    "pug-plain-loader": "^1.0.0",
+    "raw-loader": "^1.0.0",
+    "vue-loader": "^15.4.2",
+    "vue-template-compiler": "^2.5.21",
+    "webpack": "^4.28.2",
     "webpack-cli": "^3.1.2",
     "webpack-dev-middleware": "^3.4.0",
-    "webpack-dev-server": "^3.1.10",
     "webpack-hot-middleware": "^2.24.3",
     "webpack-merge": "^4.1.5"
   },
   "dependencies": {
-    "lodash": "^4.17.11"
+    "vue": "^2.5.21"
   }
 }
