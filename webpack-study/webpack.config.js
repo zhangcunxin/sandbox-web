@@ -11,8 +11,7 @@ module.exports = {
     devServer: {
         port: 3000,
         open: true,
-        hot: true,
-        contentBase: 'src'
+        hot: true
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
@@ -28,6 +27,11 @@ module.exports = {
         }, {
             test: /\.less$/,
             use: ['style-loader', 'css-loader', 'less-loader']
+        },
+        {
+            test: /\.js$/, 
+            use: 'babel-loader',
+            exclude: /node_modules/
         }
         ]
     }

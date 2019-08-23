@@ -8,3 +8,8 @@ $(function(){
         return 'yellow';
     })
 })
+
+class Person {
+    static info = {name: 'xx', age: 20}
+}
+console.log(Person.info.name)
